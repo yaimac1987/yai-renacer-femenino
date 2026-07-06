@@ -4,16 +4,50 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Yai Renacer Femenino | Coaching en Neurociencia para Transformar tu Vida y tus Relaciones</title>
-<meta name="description" content="Descubre cómo el  Coaching en Neurociencia puede ayudarte a comprender tus emociones, fortalecer tu autoestima, romper patrones que te limitan y construir una vida y relaciones más conscientes. Sesiones personalizadas, acompañamiento y recursos prácticos.">
-<meta name="keywords" content="coaching en neurociencia, coaching emocional, regulación emocional, autoestima, dependencia emocional, crecimiento personal, relaciones saludables, sanación emocional, desarrollo personal, bienestar emocional, neurociencia aplicada, transformación personal, apegos, apego evitativo, apego ansioso, amor propio">
+<meta name="description" content="Coaching en Neurociencia para comprender tus emociones, fortalecer tu autoestima y construir relaciones más conscientes. Sesiones personalizadas y acompañamiento continuo.">
+<meta name="keywords" content="coaching en neurociencia, coaching emocional, regulación emocional, autoestima, dependencia emocional, crecimiento personal, relaciones saludables, sanación emocional, desarrollo personal, bienestar emocional">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Yai Renacer Femenino">
+<meta name="theme-color" content="#101B33">
+<!-- ← Reemplaza esta URL por la definitiva una vez publiques el sitio en GitHub Pages
+     (ej. https://tuusuario.github.io/tu-repo/) para que canonical y Open Graph funcionen bien -->
+<link rel="canonical" href="https://www.yairenacerfemenino.com/">
+
 <meta property="og:title" content="Yai Renacer Femenino | Comprende tu mente. Transforma tus emociones. Crea la vida que deseas.">
 <meta property="og:description" content="Aprende a comprender el funcionamiento de tu mente, fortalecer tu bienestar emocional y desarrollar relaciones más saludables mediante un acompañamiento basado en neurociencia.">
-<meta property="og:image" content="./assets/yai-logo.jpg">
+<meta property="og:image" content="https://www.yairenacerfemenino.com/assets/yai-logo.jpg">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://www.yairenacerfemenino.com/">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Yai Renacer Femenino | Coaching en Neurociencia">
+<meta name="twitter:description" content="Coaching en Neurociencia aplicada al crecimiento personal y la regulación emocional.">
+<meta name="twitter:image" content="https://www.yairenacerfemenino.com/assets/yai-logo.jpg">
+
 <link rel="icon" href="./assets/yai-logo.jpg">
+<link rel="apple-touch-icon" href="./assets/yai-logo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Yai Renacer Femenino",
+  "description": "Coaching en Neurociencia aplicada al crecimiento personal y la regulación emocional.",
+  "image": "https://www.yairenacerfemenino.com/assets/yai-logo.jpg",
+  "url": "https://www.yairenacerfemenino.com/",
+  "email": "renacerfemenino2025@gmail.com",
+  "sameAs": [
+    "https://www.tiktok.com/@renacer.femenino77",
+    "https://www.facebook.com/yairenacerfemenino",
+    "https://www.instagram.com/renacer.femenino77"
+  ]
+}
+</script>
+
 
 <style>
 /* ============================================
@@ -426,19 +460,23 @@ header.scrolled .menu-toggle{ color:var(--navy); }
   gap:64px;
   align-items:center;
 }
-.book-cover-placeholder{
+.book-cover{
+  position:relative;
   aspect-ratio:3/4.4;
   border-radius:var(--radius-md);
-  border:1.5px dashed var(--gold);
-  background:var(--sand);
-  display:flex; flex-direction:column; align-items:center; justify-content:center;
-  text-align:center; padding:30px;
-  gap:14px;
-  color:var(--gold-deep);
+  overflow:hidden;
   box-shadow:var(--shadow-card);
+  background:var(--sand);
 }
-.book-cover-placeholder svg{ width:40px; height:40px; opacity:.8; }
-.book-cover-placeholder span{ font-size:13px; font-weight:600; max-width:200px; line-height:1.5; }
+.book-cover img{
+  width:100%; height:100%; object-fit:cover; display:block;
+}
+.book-cover-art{
+  display:none;
+  width:100%; height:100%;
+  align-items:center; justify-content:center;
+}
+.book-cover-art svg{ width:100%; height:100%; }
 .book-text .eyebrow{ margin-bottom:16px; }
 .book-text h2{ font-size:clamp(28px,3.2vw,36px); margin-bottom:18px; }
 .book-text p{ color:var(--ink-soft); margin-bottom:16px; font-size:16px; }
@@ -480,26 +518,11 @@ header.scrolled .menu-toggle{ color:var(--navy); }
 .resource-card .status .pulse{ width:6px; height:6px; border-radius:50%; background:var(--gold); }
 
 /* ============ TESTIMONIALS ============ */
-.testi-grid{
-  display:grid; grid-template-columns:repeat(3,1fr); gap:26px;
+.testi-teaser{
+  max-width:520px; margin:0 auto; text-align:center;
 }
-.testi-card{
-  background:rgba(251,248,242,0.05);
-  border:1px solid rgba(251,248,242,0.14);
-  border-radius:var(--radius-md);
-  padding:32px 28px;
-}
-.testi-card .stars{ color:var(--gold); font-size:15px; margin-bottom:16px; letter-spacing:2px; }
-.testi-card p.quote{ font-size:15px; color:rgba(251,248,242,0.86); font-style:italic; margin-bottom:22px; }
-.testi-who{ display:flex; align-items:center; gap:12px; }
-.testi-avatar{
-  width:38px; height:38px; border-radius:50%;
-  background:linear-gradient(135deg,var(--gold-light),var(--gold));
-  display:flex; align-items:center; justify-content:center;
-  font-family:'Fraunces',serif; font-weight:600; color:var(--navy); font-size:14px;
-}
-.testi-who .name{ font-size:14px; font-weight:600; color:var(--cream); }
-.testi-who .role{ font-size:12px; color:rgba(251,248,242,0.6); }
+.testi-teaser svg{ width:36px; height:36px; color:var(--gold); margin:0 auto 18px; display:block; }
+.testi-teaser p{ font-size:16px; line-height:1.7; }
 
 /* ============ NEWSLETTER ============ */
 .newsletter-box{
@@ -649,7 +672,7 @@ footer{ background:var(--navy); color:rgba(251,248,242,0.75); padding:70px 0 30p
   .about-grid, .book-grid, .contact-grid{ grid-template-columns:1fr; gap:44px; }
   .about-photo{ max-width:340px; margin:0 auto; }
   .about-photo::before{ display:none; }
-  .cards-3, .resource-grid, .testi-grid{ grid-template-columns:1fr 1fr; }
+  .cards-3, .resource-grid{ grid-template-columns:1fr 1fr; }
   .method-steps{ grid-template-columns:1fr; }
   .footer-grid{ grid-template-columns:1fr 1fr; }
   .newsletter-box{ grid-template-columns:1fr; padding:44px 30px; }
@@ -658,10 +681,10 @@ footer{ background:var(--navy); color:rgba(251,248,242,0.75); padding:70px 0 30p
   nav.main-nav, .lang-select{ display:none; }
   .menu-toggle{ display:flex; }
   .header-actions .btn-outline{ display:none; }
-  .cards-3, .resource-grid, .testi-grid{ grid-template-columns:1fr; }
+  .cards-3, .resource-grid{ grid-template-columns:1fr; }
   .footer-grid{ grid-template-columns:1fr; gap:32px; }
   .section{ padding:80px 0; }
-  .book-cover-placeholder{ max-width:240px; margin:0 auto; }
+  .book-cover{ max-width:240px; margin:0 auto; }
 }
 
 /* ============ MOBILE NAV DRAWER ============ */
@@ -762,7 +785,7 @@ footer{ background:var(--navy); color:rgba(251,248,242,0.75); padding:70px 0 30p
     <div class="hero-portrait">
       <div class="portrait-card">
         <div class="portrait-frame-accent"></div>
-        <img src="./assets/yai-portrait.jpg" alt="Yai — Coach en Neurociencia aplicada al crecimiento personal">
+        <img src="./assets/yai-portrait.jpg" alt="Yai — Coach en Neurociencia aplicada al crecimiento personal" width="480" height="600" loading="eager" fetchpriority="high">
         <div class="hero-badge">
           <span class="dot"></span>
           <span data-i18n="hero_badge">Coaching basado en neurociencia y evidencia práctica</span>
@@ -786,7 +809,7 @@ footer{ background:var(--navy); color:rgba(251,248,242,0.75); padding:70px 0 30p
 <section class="section" id="sobre-mi">
   <div class="container about-grid">
     <div class="about-photo reveal">
-      <img src="./assets/yai-portrait.jpg" alt="Yai, coach en neurociencia aplicada">
+      <img src="./assets/yai-portrait.jpg" alt="Yai, coach en neurociencia aplicada" width="480" height="600" loading="lazy">
     </div>
     <div class="about-text reveal">
       <span class="eyebrow" data-i18n="about_eyebrow">Sobre mí</span>
@@ -864,9 +887,27 @@ footer{ background:var(--navy); color:rgba(251,248,242,0.75); padding:70px 0 30p
 ============================================================= -->
 <section class="section" id="libro">
   <div class="container book-grid">
-    <div class="book-cover-placeholder reveal">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4.5A2.5 2.5 0 016.5 2H20v18H6.5A2.5 2.5 0 004 17.5v-13z"/><path d="M4 17.5A2.5 2.5 0 016.5 15H20"/></svg>
-      <span data-i18n="book_cover_placeholder">Coloca aquí la portada de tu libro digital</span>
+    <div class="book-cover reveal">
+      <img src="./assets/book-cover.jpg" alt="Portada del libro digital de Yai Renacer Femenino" width="480" height="704" loading="lazy"
+           onerror="this.onerror=null; this.style.display='none'; document.getElementById('bookCoverArt').style.display='flex';">
+      <div class="book-cover-art" id="bookCoverArt">
+        <svg viewBox="0 0 300 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Portada ilustrada del libro digital">
+          <defs>
+            <linearGradient id="coverBg" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#1F2E52"/>
+              <stop offset="100%" stop-color="#101B33"/>
+            </linearGradient>
+          </defs>
+          <rect x="0" y="0" width="300" height="440" rx="6" fill="url(#coverBg)"/>
+          <rect x="14" y="14" width="272" height="412" rx="3" fill="none" stroke="#C6A15B" stroke-width="1"/>
+          <path d="M110 150a40 40 0 0051 38 48 48 0 11-51-38z" fill="#C6A15B" opacity="0.9"/>
+          <circle cx="205" cy="160" r="3" fill="#E4CE9F"/>
+          <circle cx="185" cy="120" r="2" fill="#E4CE9F"/>
+          <text x="150" y="255" text-anchor="middle" font-family="Fraunces, serif" font-size="21" fill="#FBF8F2">Un mapa para</text>
+          <text x="150" y="283" text-anchor="middle" font-family="Fraunces, serif" font-size="21" fill="#FBF8F2">comprender tu mente</text>
+          <text x="150" y="330" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" letter-spacing="2" fill="#C6A15B">YAI RENACER FEMENINO</text>
+        </svg>
+      </div>
     </div>
     <div class="book-text reveal">
       <span class="eyebrow" data-i18n="book_eyebrow">Libro digital</span>
@@ -949,33 +990,10 @@ footer{ background:var(--navy); color:rgba(251,248,242,0.75); padding:70px 0 30p
     <div class="section-head center reveal">
       <span class="eyebrow" data-i18n="testi_eyebrow">Testimonios</span>
       <h2 data-i18n="testi_title">Voces de quienes ya transitaron su proceso</h2>
-      <p class="ink-soft-on-navy" data-i18n="testi_sub">Espacio preparado para sumar testimonios reales a medida que los recibas.</p>
     </div>
-    <div class="testi-grid reveal">
-      <div class="testi-card">
-        <div class="stars">★★★★★</div>
-        <p class="quote" data-i18n="testi1_quote">"Espacio reservado para un testimonio real. Sustituye este texto por la experiencia de tu cliente."</p>
-        <div class="testi-who">
-          <div class="testi-avatar">N.</div>
-          <div><div class="name" data-i18n="testi1_name">Nombre Apellido</div><div class="role" data-i18n="testi1_role">Programa mensual</div></div>
-        </div>
-      </div>
-      <div class="testi-card">
-        <div class="stars">★★★★★</div>
-        <p class="quote" data-i18n="testi2_quote">"Espacio reservado para un testimonio real. Sustituye este texto por la experiencia de tu cliente."</p>
-        <div class="testi-who">
-          <div class="testi-avatar">N.</div>
-          <div><div class="name" data-i18n="testi2_name">Nombre Apellido</div><div class="role" data-i18n="testi2_role">Sesión de Claridad</div></div>
-        </div>
-      </div>
-      <div class="testi-card">
-        <div class="stars">★★★★★</div>
-        <p class="quote" data-i18n="testi3_quote">"Espacio reservado para un testimonio real. Sustituye este texto por la experiencia de tu cliente."</p>
-        <div class="testi-who">
-          <div class="testi-avatar">N.</div>
-          <div><div class="name" data-i18n="testi3_name">Nombre Apellido</div><div class="role" data-i18n="testi3_role">Lector del libro</div></div>
-        </div>
-      </div>
+    <div class="testi-teaser reveal">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.17 6C4.86 6.99 3 9.51 3 12.24c0 2.31 1.5 4.01 3.5 4.01 1.71 0 3-1.28 3-3 0-1.6-1.12-2.9-2.61-3.02.24-1.4 1.47-2.9 3.11-3.5L7.17 6zm9 0C13.86 6.99 12 9.51 12 12.24c0 2.31 1.5 4.01 3.5 4.01 1.71 0 3-1.28 3-3 0-1.6-1.12-2.9-2.61-3.02.24-1.4 1.47-2.9 3.11-3.5L16.17 6z"/></svg>
+      <p class="ink-soft-on-navy" data-i18n="testi_sub">Muy pronto compartiré aquí las experiencias reales de quienes han vivido este proceso de acompañamiento.</p>
     </div>
   </div>
 </section>
@@ -1242,7 +1260,6 @@ const TRANSLATIONS = {
     book_point1:"Fundamentos de neurociencia aplicada, explicados de forma clara",
     book_point2:"Ejercicios prácticos de regulación emocional",
     book_point3:"Acceso inmediato en formato digital",
-    book_cover_placeholder:"Coloca aquí la portada de tu libro digital",
     btn_buy:"Comprar ahora",
     resources_eyebrow:"Recursos gratuitos", resources_title:"Herramientas para tu proceso",
     resources_sub:"Este espacio está preparado para alojar guías, PDFs, masterclasses y cursos — se irá completando con el tiempo.",
@@ -1254,13 +1271,7 @@ const TRANSLATIONS = {
     r6_title:"Cursos y talleres futuros", r6_p:"Espacio reservado para nuevos programas — se actualizará con cada lanzamiento.",
     status_soon:"Próximamente",
     testi_eyebrow:"Testimonios", testi_title:"Voces de quienes ya transitaron su proceso",
-    testi_sub:"Espacio preparado para sumar testimonios reales a medida que los recibas.",
-    testi1_quote:"\"Espacio reservado para un testimonio real. Sustituye este texto por la experiencia de tu cliente.\"",
-    testi1_name:"Nombre Apellido", testi1_role:"Programa mensual",
-    testi2_quote:"\"Espacio reservado para un testimonio real. Sustituye este texto por la experiencia de tu cliente.\"",
-    testi2_name:"Nombre Apellido", testi2_role:"Sesión de Claridad",
-    testi3_quote:"\"Espacio reservado para un testimonio real. Sustituye este texto por la experiencia de tu cliente.\"",
-    testi3_name:"Nombre Apellido", testi3_role:"Lector del libro",
+    testi_sub:"Muy pronto compartiré aquí las experiencias reales de quienes han vivido este proceso de acompañamiento.",
     news_title:"Recibe herramientas de regulación emocional en tu correo",
     news_p:"Ideas breves, prácticas y sin spam — cada vez que publique un recurso nuevo.",
     news_placeholder:"tu@correo.com", news_btn:"Suscribirme",
@@ -1276,7 +1287,7 @@ const TRANSLATIONS = {
     form_success:"¡Mensaje enviado! Te responderé pronto.",
     footer_desc:"Coaching en Neurociencia aplicada al crecimiento personal y la regulación emocional.",
     footer_explore:"Explorar", footer_connect:"Conecta",
-    footer_instagram:"Instagram", footer_tiktok:"TikTok", footer_facebook:"Facebook", footer_youtube:"YouTube", footer_linkedin:"LinkedIn",
+    footer_instagram:"Instagram", footer_tiktok:"TikTok", footer_facebook:"Facebook",
     footer_legal_head:"Legal", footer_privacy:"Política de privacidad", footer_terms:"Términos y condiciones",
     footer_notice:"Aviso legal", footer_copy:"© 2026 Yai Renacer Femenino. Todos los derechos reservados.",
     legal_privacy_title:"Política de privacidad",
@@ -1321,7 +1332,6 @@ const TRANSLATIONS = {
     book_point1:"Applied neuroscience fundamentals, clearly explained",
     book_point2:"Practical emotional regulation exercises",
     book_point3:"Instant access in digital format",
-    book_cover_placeholder:"Place your digital book cover here",
     btn_buy:"Buy now",
     resources_eyebrow:"Free resources", resources_title:"Tools for your process",
     resources_sub:"This space is ready to host guides, PDFs, masterclasses, and courses — it will grow over time.",
@@ -1333,13 +1343,7 @@ const TRANSLATIONS = {
     r6_title:"Future courses and workshops", r6_p:"Reserved space for new programs — updated with each launch.",
     status_soon:"Coming soon",
     testi_eyebrow:"Testimonials", testi_title:"Voices from people who've gone through the process",
-    testi_sub:"Ready to feature real testimonials as you receive them.",
-    testi1_quote:"\"Reserved space for a real testimonial. Replace this text with your client's experience.\"",
-    testi1_name:"First Last", testi1_role:"Monthly program",
-    testi2_quote:"\"Reserved space for a real testimonial. Replace this text with your client's experience.\"",
-    testi2_name:"First Last", testi2_role:"Clarity Session",
-    testi3_quote:"\"Reserved space for a real testimonial. Replace this text with your client's experience.\"",
-    testi3_name:"First Last", testi3_role:"Book reader",
+    testi_sub:"Real testimonials from people who've gone through this process will be featured here soon.",
     news_title:"Get emotional regulation tools straight to your inbox",
     news_p:"Short, practical ideas, no spam — sent whenever I publish something new.",
     news_placeholder:"you@email.com", news_btn:"Subscribe",
@@ -1355,7 +1359,7 @@ const TRANSLATIONS = {
     form_success:"Message sent! I'll get back to you soon.",
     footer_desc:"Coaching in applied neuroscience for personal growth and emotional regulation.",
     footer_explore:"Explore", footer_connect:"Connect",
-    footer_instagram:"Instagram", footer_tiktok:"TikTok", footer_facebook:"Facebook", footer_youtube:"YouTube", footer_linkedin:"LinkedIn",
+    footer_instagram:"Instagram", footer_tiktok:"TikTok", footer_facebook:"Facebook",
     footer_legal_head:"Legal", footer_privacy:"Privacy policy", footer_terms:"Terms and conditions",
     footer_notice:"Legal notice", footer_copy:"© 2026 Yai Renacer Femenino. All rights reserved.",
     legal_privacy_title:"Privacy Policy",
@@ -1400,7 +1404,6 @@ const TRANSLATIONS = {
     book_point1:"Les fondamentaux des neurosciences appliquées, expliqués simplement",
     book_point2:"Des exercices pratiques de régulation émotionnelle",
     book_point3:"Accès immédiat au format numérique",
-    book_cover_placeholder:"Placez ici la couverture de votre livre numérique",
     btn_buy:"Acheter maintenant",
     resources_eyebrow:"Ressources gratuites", resources_title:"Des outils pour votre parcours",
     resources_sub:"Cet espace est prêt à accueillir guides, PDF, masterclasses et cours — il se complètera avec le temps.",
@@ -1412,13 +1415,7 @@ const TRANSLATIONS = {
     r6_title:"Futurs cours et ateliers", r6_p:"Espace réservé aux nouveaux programmes — mis à jour à chaque lancement.",
     status_soon:"Bientôt disponible",
     testi_eyebrow:"Témoignages", testi_title:"Des voix de personnes ayant vécu ce processus",
-    testi_sub:"Prêt à accueillir de vrais témoignages au fur et à mesure.",
-    testi1_quote:"\"Espace réservé à un témoignage réel. Remplacez ce texte par l'expérience de votre client.\"",
-    testi1_name:"Prénom Nom", testi1_role:"Programme mensuel",
-    testi2_quote:"\"Espace réservé à un témoignage réel. Remplacez ce texte par l'expérience de votre client.\"",
-    testi2_name:"Prénom Nom", testi2_role:"Séance de Clarté",
-    testi3_quote:"\"Espace réservé à un témoignage réel. Remplacez ce texte par l'expérience de votre client.\"",
-    testi3_name:"Prénom Nom", testi3_role:"Lecteur du livre",
+    testi_sub:"De vrais témoignages de personnes ayant vécu ce processus seront bientôt partagés ici.",
     news_title:"Recevez des outils de régulation émotionnelle par e-mail",
     news_p:"Des idées courtes et pratiques, sans spam — à chaque nouvelle ressource publiée.",
     news_placeholder:"vous@email.com", news_btn:"M'inscrire",
@@ -1434,7 +1431,7 @@ const TRANSLATIONS = {
     form_success:"Message envoyé ! Je vous répondrai bientôt.",
     footer_desc:"Coaching en neurosciences appliquées au développement personnel et à la régulation émotionnelle.",
     footer_explore:"Explorer", footer_connect:"Suivez-moi",
-    footer_instagram:"Instagram", footer_tiktok:"TikTok", footer_facebook:"Facebook", footer_youtube:"YouTube", footer_linkedin:"LinkedIn",
+    footer_instagram:"Instagram", footer_tiktok:"TikTok", footer_facebook:"Facebook",
     footer_legal_head:"Légal", footer_privacy:"Politique de confidentialité", footer_terms:"Conditions générales",
     footer_notice:"Mentions légales", footer_copy:"© 2026 Yai Renacer Femenino. Tous droits réservés.",
     legal_privacy_title:"Politique de confidentialité",
@@ -1479,7 +1476,6 @@ const TRANSLATIONS = {
     book_point1:"Fundamentos de neurociência aplicada, explicados de forma clara",
     book_point2:"Exercícios práticos de regulação emocional",
     book_point3:"Acesso imediato em formato digital",
-    book_cover_placeholder:"Coloque aqui a capa do seu livro digital",
     btn_buy:"Comprar agora",
     resources_eyebrow:"Recursos gratuitos", resources_title:"Ferramentas para o seu processo",
     resources_sub:"Este espaço está preparado para receber guias, PDFs, masterclasses e cursos — será completado com o tempo.",
@@ -1491,13 +1487,7 @@ const TRANSLATIONS = {
     r6_title:"Futuros cursos e workshops", r6_p:"Espaço reservado para novos programas — atualizado a cada lançamento.",
     status_soon:"Em breve",
     testi_eyebrow:"Depoimentos", testi_title:"Vozes de quem já passou pelo processo",
-    testi_sub:"Espaço preparado para incluir depoimentos reais assim que você os receber.",
-    testi1_quote:"\"Espaço reservado para um depoimento real. Substitua este texto pela experiência do seu cliente.\"",
-    testi1_name:"Nome Sobrenome", testi1_role:"Programa mensal",
-    testi2_quote:"\"Espaço reservado para um depoimento real. Substitua este texto pela experiência do seu cliente.\"",
-    testi2_name:"Nome Sobrenome", testi2_role:"Sessão de Clareza",
-    testi3_quote:"\"Espaço reservado para um depoimento real. Substitua este texto pela experiência do seu cliente.\"",
-    testi3_name:"Nome Sobrenome", testi3_role:"Leitor do livro",
+    testi_sub:"Em breve, depoimentos reais de quem já viveu este processo serão compartilhados aqui.",
     news_title:"Receba ferramentas de regulação emocional no seu e-mail",
     news_p:"Ideias curtas e práticas, sem spam — sempre que eu publicar um novo recurso.",
     news_placeholder:"seu@email.com", news_btn:"Inscrever-me",
@@ -1513,7 +1503,7 @@ const TRANSLATIONS = {
     form_success:"Mensagem enviada! Responderei em breve.",
     footer_desc:"Coaching em neurociência aplicada ao crescimento pessoal e à regulação emocional.",
     footer_explore:"Explorar", footer_connect:"Conecte-se",
-    footer_instagram:"Instagram", footer_tiktok:"TikTok", footer_facebook:"Facebook", footer_youtube:"YouTube", footer_linkedin:"LinkedIn",
+    footer_instagram:"Instagram", footer_tiktok:"TikTok", footer_facebook:"Facebook",
     footer_legal_head:"Legal", footer_privacy:"Política de privacidade", footer_terms:"Termos e condições",
     footer_notice:"Aviso legal", footer_copy:"© 2026 Yai Renacer Femenino. Todos os direitos reservados.",
     legal_privacy_title:"Política de privacidade",
