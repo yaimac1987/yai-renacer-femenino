@@ -1,2 +1,2 @@
 # yai-renacer-femenino
-Official website of YAI Renacer Femenino – Coaching, emotional healing and personal transformation.
+Official website of Yai Renacer Femenino – Coaching, emotional healing and personal transformation.
