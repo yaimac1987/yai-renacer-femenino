@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1159,6 +1160,9 @@ footer{ background:var(--navy); color:rgba(251,248,242,0.75); padding:70px 0 30p
 </button>
 
 <script>
+emailjs.init({
+publicKey: "_meuAGuJdC-BmoGbr",
+});
 /* ============================================================
    CONFIG — Edit these values once and every button/icon updates.
 ============================================================= */
